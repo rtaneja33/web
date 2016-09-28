@@ -1,0 +1,47 @@
+h2{
+    	padding-top: 100px;
+    	font-style: italic;
+    	font-weight: bold;
+
+    }
+
+    img{
+      float:left;     
+     
+    }
+    .uli{
+      display:inline;
+      text-align: right;
+    }
+   
+    li{
+  margin: 30px 0;
+  font-size: 30px;
+  text-align: left;
+
+    } 
+    .animation{
+      font-size:40px;
+      text-decoration: underline;
+      text-align: center;
+      padding-left: 40px;
+      padding-right: 900px;
+
+
+
+    }
+      #burr{
+        padding-top: 400px;
+      }
+  
+       div{
+		    height: 1px; 
+       	text-align: center;
+       	font-size: 40px;
+      
+       }
+       .center{
+       	text-align: center;
+       }
+       
+       #Color{ color: red; text-align: center; }

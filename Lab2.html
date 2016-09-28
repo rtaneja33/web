@@ -1,0 +1,211 @@
+<html>
+<head>
+	<title></title>
+  <script type="text/javascript"> 
+  
+
+// window.onload= function(){
+
+//   document.getElementById('btns').onclick = function() {
+//     var v = window.setInterval(checkanswers,1000);
+
+// }​
+
+// }
+//   function checkanswers(){
+
+//     if(document.getElementById("startTimer").innerHTML>0){
+//       document.getElementById("startTimer").innerHTML = document.getElementById("startTimer").innerHTML -1;
+
+//     }
+
+//   }
+
+
+
+</script>
+<style type="">
+.center{
+ text-align: center;
+ padding-top: 20px;
+ text-decoration: underline;
+}
+#p{
+ text-align: center;
+}
+.newclass{
+ text-shadow: 2px 2px #ff0000;
+ text-align: center;
+ font-size: 30px;
+}
+.green{
+  color:red;
+  padding-left: 200px;
+  font-size: 35px;
+  padding-top: 10px;
+}
+.top{
+  margin-top: 20px;
+}
+#score{
+ text-shadow: 2px 2px #ffff00;
+ text-align: center;
+ font-size: 30px;
+}
+.left{
+ text-align: center;
+ padding-left:100px;
+}
+.extra{
+  padding-left: 60px;
+}
+.padd.top{
+  padding-left: 20px;
+  text-align: center;
+  margin-left: 50px;
+}
+.sz{
+  font-size: 35px;
+  text-align: center;
+  margin-left: 610px;
+  color:red;
+
+}
+#btns{
+  text-shadow: 2px 2px #ff0000;
+  text-align: center;
+  font-size: 30px;
+
+
+}
+.btns2{
+  text-shadow: 2px 2px #ff0000;
+  text-align: center;
+  font-size: 30px;
+
+}
+#startTimer{
+  text-shadow: 2px 2px #ff0000;
+  font-size: 50px;
+  text-align: center;
+}
+</style>
+</head>
+<body style="background:black">
+	<div style="background:url(http://gilbertsollars.com/images/wallpapers/galaxy-background/galaxy-background-16.jpg) center center no-repeat;width:screen.width;height:1500px;color:black;font-size:18px;solid #ccc;">
+    <h1 class = center style= "color:white"> Timed Logos Quiz</h1>
+    <div id="btns"><button onClick="timenow()" id = "startbtn" class = "btns2" value="Submit" enabled >Start Timer!</button></div>
+    <div class= "btns2"><button id="pause" class="newclass" onClick="pausetimer()"> Pause Timer</button><button id="resume" onclick="resume()" class="btns2">Resume Timer</button><button class="btns2" onclick= "restart()">Restart</button></div>
+    <script type="text/javascript">
+    var c = 30;
+    var correct = 0; 
+    var answers = [];
+    var already = []; 
+    var bool = false; 
+    function pausetimer(){
+
+      bool = true; 
+    }
+    function resume(){
+      bool= false;
+    }
+    function restart(){
+      c= 30;
+    }
+    function myCounter(){
+      
+
+      var sans = ["nike", "adidas", "apple", "beats", "batman", "ferrari", "pepsi", "firefox", "windows" ];
+      if(bool == false){
+        if(document.getElementById("startTimer").innerHTML>0)
+        {
+
+          document.getElementById("startTimer").innerHTML= --c;
+        }
+//       else{
+//       for(int i =0; i<9;i++)
+//       {
+//       if(document.getElementById(i+"") == sans(i))
+//         document.getElementById("b" + (i)).innerHTML="Correct!";
+//       else
+//         document.getElementById("b" + (i)).innerHTML="Wrong!";
+//       }
+//     }}
+else{
+  clearInterval(myTimer)
+  for(var i =0; i<9;i++)
+  {
+    console.log("Correct Answer: ");
+    console.log(sans[1]);
+    console.log("your answer: ");
+    console.log(document.getElementById(i+"").text);
+    if(document.getElementById(""+i).value.toLowerCase() == sans[i]){
+      document.getElementById("b" + (i)).innerHTML="Correct!";
+      correct++;
+      document.getElementById("b" + (i)).style.color = "green";
+
+
+    }
+    else{
+      document.getElementById("b" + (i)).innerHTML="Wrong!";
+
+    }
+
+  }
+  document.getElementById("score").innerHTML="Your Score: " + correct + "/9";
+
+}}
+
+}
+
+
+
+
+
+
+</script>
+
+</script>
+<div id ="startTimer">30</div>
+<script type="text/javascript">
+function getscore(){
+  document.getElementById("score").innerHTML="Your score: " + correct + "/9";
+  console.log("hello");
+}
+function timenow(){
+  document.getElementById("startbtn").disabled = true;
+  myTimer = setInterval(myCounter, 1000)
+}
+
+</script>
+<div id="score"></div>
+<table width="100%" height="100%" border="1">
+  <tr>
+    <td>&nbsp;<img class ="extra" src="nike.png" alt="guess" height="115" style= "padding-left:120px" width="300"><input id = "0" class = "padd top" style=margin-left:170px autofocus></input><div id="b0" class = "green"></div> </td>
+    
+    <td>&nbsp;<img class= "left" src="adidas.png" alt="guess" height="115" width="300"><input id = "1" class = "padd top" style=margin-left:170px ></input> <div id="b1" class = "green"></div></td>
+    
+    <td>&nbsp;<img class= "left" src="apple.png" alt="guess" height="140" width="300"> <input id = "2" class = "padd top" style=margin-left:170px ></input><div id="b2" class = "green"></div></td>
+
+  </tr>
+  <tr>
+    <td>&nbsp;<img class= "left" src="beats.png" alt="guess" height="115" width="300"> <input id = "3" class = "padd top" style=margin-left:170px ></input><div id="b3" class = "green"></div></td>
+    <td>&nbsp;<img class= "left" src="batman.png" alt="guess" height="115" width="300"> <input id = "4" class = "padd top" style=margin-left:170px ></input> <div id="b4" class = "green"></div></td>
+    <td>&nbsp;<img class= "left" src="ferrari.png" alt="guess" height="115" width="300"> <input id = "5" class = "padd top" style=margin-left:170px ></input><div id="b5" class = "green"></div></td>
+    <td rowspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;<img class= "left" src="pepsi.jpg" alt="guess" height="115" width="300"> <input id = "6" class = "padd top" style=margin-left:170px ></input><div id="b6" class = "green"></div></td>
+    <td>&nbsp;<img class= "left" src="firefox.jpg" alt="guess" height="115" width="300"> <input id = "7" class = "padd top" style=margin-left:170px ></input><div id="b7" class = "green"></div></td>
+    <td>&nbsp;<img class= "left" src="windows.jpg" alt="guess" height="115" width="300"> <input id = "8" class = "padd top" style=margin-left:170px ></input><div id="b8" class = "green"></div></td>
+
+  </tr>
+
+<!--   <tr>
+    <td>&nbsp;</td>
+  </tr> -->
+</table>
+</div>
+
+</body>
+</html>

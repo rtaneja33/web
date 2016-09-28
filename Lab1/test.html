@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+
+
+
+function dropdownlist(listindex)
+ {
+
+document.formname.category2.options.length = 0;
+ switch (listindex)
+ {
+
+ case "Home Ware" :
+ document.formname.category2.options[0]=new Option("Select Category2","");
+ document.formname.category2.options[1]=new Option("Air-Conditioners/Coolers","Air-Conditioners/Coolers");
+ document.formname.category2.options[2]=new Option("Audio/Video","Audio/Video");
+ document.formname.category2.options[3]=new Option("Beddings","Beddings");
+ document.formname.category2.options[4]=new Option("Camera","Camera");
+ document.formname.category2.options[5]=new Option("Cell Phones","Cell Phones");
+
+ break;
+
+ case "Education" :
+ document.formname.category2.options[0]=new Option("Select Category2","");
+ document.formname.category2.options[1]=new Option("Colleges","Colleges");
+ document.formname.category2.options[2]=new Option("Institutes","Institutes");
+ document.formname.category2.options[3]=new Option("Schools","Schools");
+ document.formname.category2.options[4]=new Option("Tuitions","Tuitions");
+ document.formname.category2.options[5]=new Option("Universities","Universities");
+
+ break;
+
+ case "Books" :
+ document.formname.category2.options[0]=new Option("Select Category2","");
+ document.formname.category2.options[1]=new Option("College Books","College Books");
+ document.formname.category2.options[2]=new Option("Engineering","Engineering");
+ document.formname.category2.options[3]=new Option("Magazines","Magazines");
+ document.formname.category2.options[4]=new Option("Medicine","Medicine");
+ document.formname.category2.options[5]=new Option("References","References");
+
+ break;
+
+ }
+ return true;
+ }
+
+
+
+
+    </script>
+  </head>
+  <body>
+     <form id="formname" name="formname" method="post" action="submitform.asp" >
+ <table width="50%" border="0" cellspacing="0" cellpadding="5">
+ <tr>
+ <td width="41%" align="right" valign="middle">Category1 :</td>
+ <td width="59%" align="left" valign="middle"><select name="category1" id="category1" onchange="javascript: dropdownlist(this.options[this.selectedIndex].value);">
+ <option value="">Select Category1</option>
+ <option value="Home Ware">Home Ware</option>
+ <option value="Education">Education</option>
+ <option value="Books">Books</option>
+ </select></td>
+ </tr>
+ <tr>
+ <td align="left" >Category2 :
+ </td>
+ <td align="left"><script type="text/javascript" language="JavaScript">
+ document.write('<select name="category2"><option value="">Select Category2</option></select>')
+ </script>
+ <noscript><select name="category2" id="category2" >
+ <option value="">Select Category2</option>
+ </select>
+ </noscript></td>
+ </tr>
+ </table>
+
+</form>
+  </body>
+</html>
