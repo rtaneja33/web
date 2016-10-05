@@ -37,13 +37,13 @@
 	            	var stringg = "";
 	                //document.getElementById("txtHint").innerHTML = this.responseText;
 	                var string = this.responseText.split(" ");
-	                document.getElementById("option1x").innerHTML =string[1];
-	                	document.getElementById("option2x").innerHTML = string[2];
-	                    document.getElementById("option3x").innerHTML = string[3];
- 						document.getElementById("option4x").innerHTML = string[4];
- 						stringg = string[1]  + "\n" + string[2] + "\n" + string[3] + "\n" + string[4];
+	                document.getElementById("option1").innerHTML =string[0];
+	                	document.getElementById("option2").innerHTML = string[1];
+	                    document.getElementById("option3").innerHTML = string[2];
+ 						document.getElementById("option4").innerHTML = string[3];
+ 						stringg = string[0]  + "\n" + string[1] + "\n" + string[2] + "\n" + string[3];
  						document.getElementById("inputs").innerHTML = stringg;
-
+ 						
 
 
 
@@ -63,13 +63,8 @@
 	</script>
 </head>
 <body>
-	<input id= "queryInput" list="suggestions" onkeyup="showHint(this.value)" >
-	<ul id = "inputs">
-		<li id = "option1x"></li>
-		<li id = "option2x"></li>
-		<li id = "option3x"></li>
-		<li id = "option4x"></li>
-	</ul>	
+	<input id= "queryInput" list="suggestions" onkeyup="showHint(this.value)">
+	<div id="inputs"></div>
 	<p>Suggestions: <span id="txtHint"></span></p>
 	<datalist id="suggestions">
 		<option id = "option1"></option>
