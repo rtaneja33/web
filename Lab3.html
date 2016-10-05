@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title> Lab 3 My Server </title>
+	<script type="text/javascript">
+		window.onload=function(){
+
+			document.getElementById("sendQueryButton").onclick = whenClicked;
+
+
+		}
+		function whenClicked(){
+				var xhttp = new XMLHttpRequest();
+				var search = queryInput.value;
+				// for(var x =0; x < 4; x++)
+				// 		{
+							
+				// 		}
+				xhttp.onreadystatechange = function(){
+					if(this.readyState ==4 && this.status == 200)
+					{
+						alert(this.responseText);
+
+						document.getElementById("outputDiv").innerHTML = (this.responseText);
+					}}
+					xhttp.open("GET", "https://tmrudwick-web.herokuapp.com/SearchQuery/search.php?query=" + search, true);
+					xhttp.send();
+				}
+
+			function showHint(str){
+	    if (str.length == 0) { 
+	        document.getElementById("txtHint").innerHTML = "";
+	        return;
+	    } else {
+	        var xmlhttp = new XMLHttpRequest();
+	        xmlhttp.onreadystatechange = function() {
+	            if (this.readyState == 4 && this.status == 200) {
+	            	var stringg = "";
+	                //document.getElementById("txtHint").innerHTML = this.responseText;
+	                var string = this.responseText.split(" ");
+	                document.getElementById("option1x").innerHTML =string[1];
+	                	document.getElementById("option2x").innerHTML = string[2];
+	                    document.getElementById("option3x").innerHTML = string[3];
+ 						document.getElementById("option4x").innerHTML = string[4];
+ 						stringg = string[1]  + "\n" + string[2] + "\n" + string[3] + "\n" + string[4];
+ 						document.getElementById("inputs").innerHTML = stringg;
+
+
+
+
+
+	               // document.getElementById("option1").innerHTML = "hola";
+	               // var op = document.createElement("OPTION");
+
+
+	            }
+	        };
+	        xmlhttp.open("GET", "https://tmrudwick-web.herokuapp.com/SearchQuery/search.php?query=" + str, true);
+	        xmlhttp.send();
+	    }
+		}
+		
+
+	</script>
+</head>
+<body>
+	<input id= "queryInput" list="suggestions" onkeyup="showHint(this.value)" >
+	<ul id = "inputs">
+		<li id = "option1x"></li>
+		<li id = "option2x"></li>
+		<li id = "option3x"></li>
+		<li id = "option4x"></li>
+	</ul>	
+	<p>Suggestions: <span id="txtHint"></span></p>
+	<datalist id="suggestions">
+		<option id = "option1"></option>
+		<option id = "option2"></option>
+		<option id = "option3"></option>
+		<option id = "option4"></option>
+	</datalist>
+	<button id="sendQueryButton">Send AJAX Request</button>
+	<div id = "outputDiv"></div>
+	
+</body>
+</html>
