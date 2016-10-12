@@ -6,9 +6,9 @@
 	<?php
 		echo("<input id = 'toOutput'>");
 		echo("hello");
-		
+
 	?>
-	<button id="changeStuff"></button>
+	<button id="changeStuff">click me!</button>
 	<div id ="outputDiv"></div>
 
 </body>
