@@ -15,7 +15,7 @@
 		echo("hello");
 
 	?>
-	<button id="changeStuff" onclick = "doStuff">click me!</button>
+	<button id="changeStuff" onclick = "doStuff()">click me!</button>
 	<div id ="outputDiv"></div>
 
 </body>
