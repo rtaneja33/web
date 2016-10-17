@@ -29,14 +29,14 @@
    		}
 	</style>
 	<script type="text/javascript">
+		var timeout = null;
 		window.onload=function(){
 
 		var textInput = document.getElementById('queryInput');
 
 
 		// Init a timeout variable to be used below
-		var timeout = null;
-
+		
 		// Listen for keystroke events
 		textInput.onkeyup = function (e) {
 
@@ -46,8 +46,8 @@
 		    clearTimeout(timeout);
 
 		    // Make a new timeout set to go off in 800ms
-		    timeout = setInterval(showHint(textInput.value), 5000);
-		};
+		    timeout = setTimeout(showHint(textInput.value), 1000);
+		}
 
 
 		}
