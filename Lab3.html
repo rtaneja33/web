@@ -58,11 +58,22 @@
 	            	var stringg = "";
 	                //document.getElementById("txtHint").innerHTML = this.responseText;
 	                var string = this.responseText.split(" ");
-	                document.getElementById("option1").innerHTML =string[1];
-	                	document.getElementById("option2").innerHTML = string[2];
-	                    document.getElementById("option3").innerHTML = string[3];
- 						document.getElementById("option4").innerHTML = string[4];
- 						stringg = string[1]  + "</br>" + string[2] + "</br>" +string[3] + "</br>" + string[4];
+	                console.log(string.length);
+	                if(string.length>4)
+	                		stringg = string[0]  + "</br>" + string[1] + "</br>" +string[2] + "</br>" + string[3];
+	                	else{
+	                for(var gd=0; gd< string.length; gd++)
+	                {
+	                	
+	                		stringg = stringg + "</br>" + string[gd] ;
+	                	
+	                }}
+ 					//stringg = string[1]  + "</br>" + string[2] + "</br>" +string[3] + "</br>" + string[4];
+ 					
+ 					   //stringg = string[1]  + "</br>" + string[2] + "</br>" +string[3] + "</br>" + string[4];
+
+
+
  						document.getElementById("inputs").innerHTML = stringg;
 
 
@@ -105,38 +116,39 @@
 				//var myVar=null;
 		
 			}
-function showHint(str){
-	    if (str.length == 0) { 
-	        document.getElementById("inputs").innerHTML = "";
-	        return;
-	    } else {
-	        var xmlhttp = new XMLHttpRequest();
-	        xmlhttp.onreadystatechange = function() {
-	            if (this.readyState == 4 && this.status == 200) {
-	            	var stringg = "";
-	                //document.getElementById("txtHint").innerHTML = this.responseText;
-	                var string = this.responseText.split(" ");
-	                document.getElementById("option1").innerHTML =string[1];
-	                	document.getElementById("option2").innerHTML = string[2];
-	                    document.getElementById("option3").innerHTML = string[3];
- 						document.getElementById("option4").innerHTML = string[4];
- 						stringg = string[1]  + "</br>" + string[2] + "</br>" +string[3] + "</br>" + string[4];
- 						document.getElementById("inputs").innerHTML = stringg;
+// function showHint(str){
+// 	    if (str.length == 0) { 
+// 	        document.getElementById("inputs").innerHTML = "";
+// 	        return;
+// 	    } else {
+// 	        var xmlhttp = new XMLHttpRequest();
+// 	        xmlhttp.onreadystatechange = function() {
+// 	            if (this.readyState == 4 && this.status == 200) {
+// 	            	var stringg = "";
+// 	                //document.getElementById("txtHint").innerHTML = this.responseText;
+// 	                var string = this.responseText.split(" ");
+// 	                if(string.length<4){var min = 4- string.length;}
+ 						
+
+ 					
+
+//  						stringg = string[1]  + "</br>" + string[2] + "</br>" +string[3] + "</br>" + string[4];
+//  						document.getElementById("inputs").innerHTML = stringg;
 
 
 
 
 
-	               // document.getElementById("option1").innerHTML = "hola";
-	               // var op = document.createElement("OPTION");
+// 	               // document.getElementById("option1").innerHTML = "hola";
+// 	               // var op = document.createElement("OPTION");
 
 
-	            }
-	        }; 
-	        xmlhttp.open("GET", "https://tmrudwick-web.herokuapp.com/SearchQuery/search.php?query=" + str, true);
-	        xmlhttp.send();
-	    }
-		}
+// 	            }
+// 	        }; 
+// 	        xmlhttp.open("GET", "https://tmrudwick-web.herokuapp.com/SearchQuery/search.php?query=" + str, true);
+// 	        xmlhttp.send();
+// 	    }
+// 		}
 			
 		
 
