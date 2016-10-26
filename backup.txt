@@ -1,0 +1,44 @@
+function accept(){
+
+
+	 	var str = document.getElementById("input2").value;
+
+	    if (str.length == 0) { 
+	        alert("Please Enter A String")
+	        return;
+	    } else {
+	        var xmlhttp = new XMLHttpRequest();
+	        xmlhttp.onreadystatechange = function() {
+	            if (this.readyState == 4 && this.status == 200) {
+	            	var stringg = "";
+	            	var bool = false;
+	                //document.getElementById("txtHint").innerHTML = this.responseText;
+	                var string = this.responseText.split(" ");
+	               for(var i = 0; i < string.length;i++)
+	               {
+	               		if(string[i] == str){
+						alert("Word Saved. Please Hand Keyboard over to Player 2 to begin game. "); bool = true}
+
+	               }
+	               if( bool == false)
+	               	alert("Please Enter a REAL WORd. This aint real.")
+	            //    if(bool == true)
+	            //    {
+	            //    	var chars = str.split('');
+	               	
+	            //    	if(document.getElementById("checker").clicked == true){
+	            //    		var guess = document.getElementById("guess").value;
+	            //    	for(var ctr = 0; ctr < 5; ctr++)
+	            //    	{
+	            //    		if(guess == chars[ctr]){
+	            //    		document.getElementById(ctr+"").value = chars[ctr];}
+	            //    	}
+	            //    }
+	            //    // document.getElementById("option1").innerHTML = "hola";
+	            //    // var op = document.createElement("OPTION");
+
+
+	            // }
+	        }; 
+	        xmlhttp.open("GET", "https://tmrudwick-web.herokuapp.com/SearchQuery/search.php?query=" + str, true);
+	        xmlhttp.send();

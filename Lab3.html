@@ -1,6 +1,12 @@
 <html>
 <head>
 	<title> Lab 3 My Server </title>
+	<script type="text/javascript">	
+	window.onload= function(){
+			var xt = (Math.floor(Math.random()*string.length));
+	                console.log(xt);
+	}
+		</script>
 	<style>
 		#sbar{
 			text-align: center;
@@ -58,6 +64,9 @@
 	            	var stringg = "";
 	                //document.getElementById("txtHint").innerHTML = this.responseText;
 	                var string = this.responseText.split(" ");
+	                var xt = (Math.floor(Math.random()*string.length));
+	                console.log(xt);
+
 	                console.log(string.length);
 	                if(string.length>4)
 	                		stringg = string[0]  + "</br>" + string[1] + "</br>" +string[2] + "</br>" + string[3];

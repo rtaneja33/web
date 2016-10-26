@@ -1,0 +1,335 @@
+<html>
+<head>
+	<title> Lab 4 </title>
+	<script type="text/javascript">	
+	
+		</script>
+	<style>
+		h1{
+		text-align: center;
+		padding-top: 10px;
+		}
+		#sbar{
+			text-align: center;
+			font-size: 30px;
+			padding-top: 50px;
+   			 font-color: aqua;
+   			 font-weight: bold;
+   			}
+   		#queryInput{
+   			width: 400px;
+   		}
+   		#inputs{
+   			text-align: center;
+   			padding-top: 20px;
+   			padding-left: 50px;
+   			font-weight: bold;
+   			font-size: 22px;
+   		}
+   		.pt1{
+   			text-align: center;
+   			padding-left: 7px;
+   			font-size: 30px;
+   		}
+   		#newtype{
+   			text-align: center;
+   			padding-top: 50px;
+   			padding-left: 50px;
+   			font-weight: bold;
+   			font-size: 22px;
+
+   		}
+	</style>
+	<script type="text/javascript">
+	// 	var timeout = null;
+	// 	window.onload=function(){
+
+	// 	var textInput = document.getElementById('queryInput');
+
+
+	// 	// Init a timeout variable to be used below
+		
+	// 	// Listen for keystroke events
+	// 	textInput.onkeyup = function (e) {
+
+	// 	    // Clear the timeout if it has already been set.
+	// 	    // This will prevent the previous task from executing
+	// 	    // if it has been less than <MILLISECONDS>
+	// 	    clearTimeout(timeout);
+
+	// 	    // Make a new timeout set to go off in 800ms
+	// 	    timeout = setTimeout( function showHint(){
+	// 	    	var str = textInput.value;
+	//     if (str.length == 0) { 
+	//         document.getElementById("inputs").innerHTML = "";
+	//         return;
+	//     } else {
+	//         var xmlhttp = new XMLHttpRequest();
+	//         xmlhttp.onreadystatechange = function() {
+	//             if (this.readyState == 4 && this.status == 200) {
+	//             	var stringg = "";
+	//                 //document.getElementById("txtHint").innerHTML = this.responseText;
+	//                 var string = this.responseText.split(" ");
+	//                 var xt = (Math.floor(Math.random()*string.length));
+	//                 console.log(xt);
+
+	//                 console.log(string.length);
+	//                 if(string.length>4)
+	//                 		stringg = string[0]  + "</br>" + string[1] + "</br>" +string[2] + "</br>" + string[3];
+	//                 	else{
+	//                 for(var gd=0; gd< string.length; gd++)
+	//                 {
+	                	
+	//                 		stringg = stringg + "</br>" + string[gd] ;
+	                	
+	//                 }}
+ // 					//stringg = string[1]  + "</br>" + string[2] + "</br>" +string[3] + "</br>" + string[4];
+ 					
+ // 					   //stringg = string[1]  + "</br>" + string[2] + "</br>" +string[3] + "</br>" + string[4];
+
+
+
+ // 						document.getElementById("inputs").innerHTML = stringg;
+
+
+
+
+
+	//                // document.getElementById("option1").innerHTML = "hola";
+	//                // var op = document.createElement("OPTION");
+
+
+	//             }
+	//         }; 
+	//         xmlhttp.open("GET", "https://tmrudwick-web.herokuapp.com/SearchQuery/search.php?query=" + str, true);
+	//         xmlhttp.send();
+	//     }
+	// 	}, 1000);
+	// 	};
+
+
+	// 	}
+		// function whenClicked(){
+		// 		var xhttp = new XMLHttpRequest();
+		// 		var search = queryInput.value;
+		// 		// for(var x =0; x < 4; x++)
+		// 		// 		{
+							
+		// 		// 		}
+		// 		xhttp.onreadystatechange = function(){
+		// 			if(this.readyState ==4 && this.status == 200)
+		// 			{
+		// 				alert(this.responseText);
+
+		// 				document.getElementById("outputDiv").innerHTML = (this.responseText);
+		// 			}}
+					
+		// 			xhttp.open("GET", "https://tmrudwick-web.herokuapp.com/SearchQuery/search.php?query=" + search, true);
+		// 			xhttp.send();
+		// 		}
+			function doAction(str){
+				//var myVar=null;
+		
+			}
+// function showHint(str){
+// 	    if (str.length == 0) { 
+// 	        document.getElementById("inputs").innerHTML = "";
+// 	        return;
+// 	    } else {
+// 	        var xmlhttp = new XMLHttpRequest();
+// 	        xmlhttp.onreadystatechange = function() {
+// 	            if (this.readyState == 4 && this.status == 200) {
+// 	            	var stringg = "";
+// 	                //document.getElementById("txtHint").innerHTML = this.responseText;
+// 	                var string = this.responseText.split(" ");
+// 	                if(string.length<4){var min = 4- string.length;}
+ 						
+
+ 					
+
+//  						stringg = string[1]  + "</br>" + string[2] + "</br>" +string[3] + "</br>" + string[4];
+//  						document.getElementById("inputs").innerHTML = stringg;
+
+
+
+
+
+// 	               // document.getElementById("option1").innerHTML = "hola";
+// 	               // var op = document.createElement("OPTION");
+
+
+// 	            }
+// 	        }; 
+// 	        xmlhttp.open("GET", "https://tmrudwick-web.herokuapp.com/SearchQuery/search.php?query=" + str, true);
+// 	        xmlhttp.send();
+// 	    }
+// 		}
+			
+		
+
+	</script>
+</head>
+
+<body>
+	<div style="background:url(http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg) center center no-repeat;width:screen.width;height:1500px;color:black;font-size:18px;solid #ccc;">
+	<!-- <div id = "sbar">Type Anything!         <input id= "queryInput" list="suggestions" onkeyup="doAction(this.value)"></div> -->
+	<h1>Hangman<h1>
+	<div id = "sbar"> Player 1, Enter a 5- letter Hangman word <input type="password" maxlength="5" id= "input2" list="suggestions"> </input> <button id = "Ok" onclick="accept()">Ok</button></div>
+	 <script type="text/javascript">
+	 function accept(){
+	 	  
+
+
+	 	var str = document.getElementById("input2").value;
+
+	 	// for(var w = 0; w < 5; w++)
+	 	// {
+	 	// 	document.getElementById(""+w).style.visibility="hidden";
+	 	// }
+	    if (str.length == 0) { 
+	        alert("Please Enter A String")
+	        return;
+	    } else {
+	        var xmlhttp = new XMLHttpRequest();
+	        xmlhttp.onreadystatechange = function() {
+	            if (this.readyState == 4 && this.status == 200) {
+	            	var stringg = "";
+	            	var bool = false;
+	                //document.getElementById("txtHint").innerHTML = this.responseText;
+	                var string = this.responseText.split(" ");
+	               for(var i = 0; i < string.length;i++)
+	               {
+	               		if(string[i] == str){
+						alert("Word Saved. Please Hand Keyboard over to Player 2 to begin game. "); document.getElementById('input2').style.display="none"; document.getElementById("Ok").style.display="none"; bool = true}
+
+	               }
+	               if( bool == false)
+	               	alert("This is not a real word. Please enter a real word.");
+	               if(bool == true)
+	               {
+	               	var chars = str.split('');
+	               	var guess = document.getElementById("guess").value;
+	               	for(var ctr = 0; ctr < 5; ctr++ )
+	               	{
+	               		document.getElementById(ctr+"").innerHTML = chars[ctr];
+	               	}
+	               	var countr =0;
+	               	document.getElementById("btn").onclick = function(){
+	               		var gss = document.getElementById("guess").value;
+	               		document.getElementById("guess").value=""; 
+	               		if(gss.length>0)
+	               		{
+	               			var b = false;
+	               			//var t=false;      
+	               			var corrcounter =0;        
+	               			var se = "HANGMAN";
+	               			var hang = se.split('');
+
+	               			 	for(var ct = 0; ct < 5; ct++ )
+	               					{
+	               						
+	               						if(gss == chars[ct]){
+	               							b = true;
+	               						
+	               						document.getElementById(ct+"").value= chars[ct];
+	               						
+
+
+	               					}
+
+
+	               					
+	               					}
+	               					
+	               				// for(var x =0; x < 5;x++)
+	               				// {
+	               				// 	if(document.getElementById(""+x).value.length<1)
+	               				// 		t = false;
+
+	               				// }	
+	               				// if(t= true){
+	               				// 	alert("Player 2 Wins!")
+	               				// }
+	               					if(b == false){
+	               						if(countr>5){
+	               								document.getElementById("newtype").innerHTML = "HANGMAN";
+	               								alert("Game Over. Player 1 Wins.");
+	               								close();
+	               						}
+	               						else{
+	               						alert("Word does NOT contain this letter!");
+	               						countr++;
+	               						console.log(countr);
+	               							               						document.getElementById("newtype").innerHTML = document.getElementById("newtype").innerHTML+ hang[countr-1];
+}
+	               					}
+
+	               			} 
+	               		}
+	      
+	               	
+	               		
+	               }
+	           
+
+
+	            }
+	        }; 
+	        xmlhttp.open("GET", "https://tmrudwick-web.herokuapp.com/SearchQuery/search.php?query=" + str, true);
+	        xmlhttp.send();
+	    }
+		}		
+	// 	function accept(){
+	// 	 var txt= document.getElementById("input2").value;
+	// 	 console.log("1");
+	// 	 for(var i = 0; i < txt.length; i++)
+	// 	 {
+			
+	// 		var stri = document.createElement("input");
+	// 		console.log("2");
+	// 	stri.type = "text";
+	// 		stri.className = "css-boxtype"; // set the CSS class
+	// 	 	document.body.appendChild(stri);
+			
+	// 	}}
+	//</script>
+	<div id="input" > <input id ="0" class = "pt1" style="width: 31px" maxlength="1"></input><input id ="1" class= "pt1" style="width: 31px" maxlength="1"></input><input id ="2" class = "pt1" style="width: 31px" maxlength="1"></input><input id ="3" class = "pt1" style="width: 31px" maxlength="1"></input><input id ="4" class = "pt1" style="width: 31px" maxlength="1"></input></div>
+
+
+
+
+	<div id = "sbar">Your Guess        <input id ="guess" class = "pt1" style="width: 31px" maxlength="1"></input> <button id="btn">Check For Letter</button></div>
+	<script> 
+		// function checkLetter(){
+		// 	var charsd = "";
+		// 	for(var d=0; d<5; d++)
+		// 	{
+		// 		charsd[d] = document.getElementById(""+d).value;
+
+		// 	}
+
+		// 	var guesss = document.getElementById("guess").value;
+		// 		// for(var q=0; q<5; q++)
+		// 		// if(charsd[q]==guesss)
+		// 		// 	alert("Correct!");
+		// 		// else
+		// 		// 	alert("INCorrect!");
+		// 	}
+		
+	</script>
+<!-- 	<div id = "sbar">Type Anything!         <input id= "queryInput" list="suggestions" onkeyup="showHint(this.value)"></div> -->
+	<div>Strikes:  </div> <div id="newtype"> </div>
+	<div id="inputs"></div>
+<!-- 	<p>Suggestions: <span id="txtHint"></span></p> -->
+	<datalist id="suggestions">
+		<option id = "option1"></option>
+		<option id = "option2"></option>
+		<option id = "option3"></option>
+		<option id = "option4"></option>
+	</datalist>
+	<!-- //<button id="sendQueryButton">Send AJAX Request</button> -->
+	<div id = "outputDiv"></div>
+	</div>
+</body>
+
+</html>
