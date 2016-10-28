@@ -10,7 +10,7 @@
 	$query = <<<CREATE
 		CREATE TABLE Football(
 				TeamName varchar(255);
-				NumberofWins int
+				NumberofWins int;
 			)
 
 CREATE;
