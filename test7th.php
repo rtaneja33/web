@@ -24,7 +24,7 @@ CREATE;
 	}
 
 
-	$query = "CREATE "...
+	// $query = "CREATE "...
 	//add some data
 
 	//Query our table
