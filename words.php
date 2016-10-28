@@ -1,9 +1,6 @@
 <?php
-$x = $_GET("str");
-
+//$x = $_GET("str");
 $myfile = fopen("words.txt", "r") or die("Unable to open file!");
-echo("hello");
-echo fread($myfile, filesize('words.txt'));
-//printf($x);
+echo fread($myfile, filesize("words.txt"));
 fclose($myfile);
 ?>
