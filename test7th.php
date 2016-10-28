@@ -9,8 +9,8 @@
 	//create a table try/catch
 	$query = <<<CREATE
 		CREATE TABLE Football(
-				TeamName varchar(255);
-				NumberofWins int;
+				TeamName varchar(255),
+				NumberofWins int
 			)
 
 CREATE;
