@@ -13,7 +13,8 @@ for($i = 0; $i < sizeof($pieces); $i++)
 {
 if($pieces[$i] == $s)
 	{
-		$bool = true;
+		bool = true;
+		echo($s);
 	}
 }
 if($bool == true)
