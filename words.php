@@ -1,6 +1,6 @@
 <?php
 $s = $_REQUEST["str"];
-echo($s);
+
 //$x = $_GET("str");
 $myfile = fopen("words.txt", "r") or die("Unable to open file!");
 //echo fread($myfile, filesize("words.txt"));
@@ -8,10 +8,18 @@ $myfile = fopen("words.txt", "r") or die("Unable to open file!");
 // echo($file);
 $homepage = file_get_contents('words.txt');
 $pieces = explode(" ", $homepage);
-// for(var i = 0; i < sizeof($pieces);i++)
-// {
-
-// }
+$bool = false;
+for(var i = 0; i < sizeof($pieces);i++)
+{
+if($pieces[i] == $s)
+	{
+		$bool = true;
+	}
+}
+if($bool == true)
+	echo($s);
+else
+	echo("Not A Real Word");
 // //split homepage into array
 // echo $homepage;
 
