@@ -9,9 +9,9 @@ $myfile = fopen("words.txt", "r") or die("Unable to open file!");
 $homepage = file_get_contents('words.txt');
 $pieces = explode(" ", $homepage);
 $bool = false;
-for(var i = 0; i < sizeof($pieces);i++)
+for($i = 0; $i < sizeof($pieces); $i++)
 {
-if($pieces[i] == $s)
+if($pieces[$i] == $s)
 	{
 		$bool = true;
 	}
