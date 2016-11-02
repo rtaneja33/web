@@ -9,7 +9,7 @@
 	//create a table try/catch
 	$query = <<<CREATE
 		CREATE TABLE Football(
-				TeamName varchar(255),
+				TeamName varchar(255),	
 				NumberofWins int
 			)
 
@@ -26,6 +26,19 @@ CREATE;
 
 	// $query = "CREATE "...
 	//add some data
+	$query = <<<CREATE
+		INSERT INTO Football VALUES(
+			Redskins, 4);
+		
 
+CREATE;
+$ret = pg_query($query);
+	if(!$ret)
+	{
+		echo(pg_last_error($db));
+	}
+	else{
+		echo("IT WORKED!");
+	}
 	//Query our table
  ?>
