@@ -19,6 +19,11 @@
    		#queryInput{
    			width: 400px;
    		}
+   		.spc{
+   			padding-top: 30px;
+   			font-size: 30px;
+   			text-decoration: underline;
+   		}
    		#inputs{
    			text-align: center;
    			padding-top: 20px;
@@ -193,18 +198,16 @@
 	        var xmlhttp = new XMLHttpRequest();
 	        xmlhttp.onreadystatechange = function() {
 	            if (this.readyState == 4 && this.status == 200) {
-	            	alert("response "+ this.responseText);
+	            	
 
 	            	var stringg = "";
 	            	var bool = false;
 	                //document.getElementById("txtHint").innerHTML = this.responseText;
 	                var string = this.responseText.split(" ");
-	               for(var i = 0; i < string.length;i++)
-	               {
-	               		if(string[i] == str){
-						alert("Word Saved. Please Hand Keyboard over to Player 2 to begin game. "); document.getElementById('input2').style.display="none"; document.getElementById("Ok").style.display="none"; bool = true}
+	              if(this.responseText>0){
+						alert("Word Saved. Please Hand Keyboard over to Player 2 to begin game. "); document.getElementById('input2').style.display="none"; document.getElementById("Ok").style.display="none"; bool = true}}
 
-	               }
+	               
 	               if( bool == false)
 	               	alert("This is not a real word. Please enter a real word.");
 	               if(bool == true)
@@ -216,8 +219,10 @@
 	               		document.getElementById(ctr+"").innerHTML = chars[ctr];
 	               	}
 	               	var countr =0;
+
 	               	document.getElementById("btn").onclick = function(){
 	               		var gss = document.getElementById("guess").value;
+	               		
 	               		document.getElementById("guess").value=""; 
 	               		if(gss.length>0)
 	               		{
@@ -238,10 +243,15 @@
 
 
 	               					}
+	               					
+
+
 
 
 	               					
 	               					}
+	               					if(b==false)
+	               						document.getElementById("guesses").innerHTML += " " + gss;
 	               					
 	               				// for(var x =0; x < 5;x++)
 	               				// {
@@ -280,7 +290,8 @@
 	        xmlhttp.open("GET", "https://rtaneja.herokuapp.com/words.php?str=" + str, true);
 	        xmlhttp.send();
 	    }
-		}		
+
+		
 	// 	function accept(){
 	// 	 var txt= document.getElementById("input2").value;
 	// 	 console.log("1");
@@ -298,7 +309,7 @@
 	<div id="input" > <input id ="0" class = "pt1" style="width: 31px" maxlength="1"></input><input id ="1" class= "pt1" style="width: 31px" maxlength="1"></input><input id ="2" class = "pt1" style="width: 31px" maxlength="1"></input><input id ="3" class = "pt1" style="width: 31px" maxlength="1"></input><input id ="4" class = "pt1" style="width: 31px" maxlength="1"></input></div>
 
 
-
+<div id = "guesses" class = "spc"> Your Incorrect Guesses:  </div>
 
 	<div id = "sbar">Your Guess        <input id ="guess" class = "pt1" style="width: 31px" maxlength="1"></input> <button id="btn">Check For Letter</button></div>
 	<script> 
