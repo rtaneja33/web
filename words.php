@@ -1,5 +1,6 @@
 <?php
 $s = $_REQUEST["str"];
+echo($s);
 
 //$x = $_GET("str");
 $myfile = fopen("words.txt", "r") or die("Unable to open file!");
