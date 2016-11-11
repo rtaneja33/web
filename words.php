@@ -1,6 +1,6 @@
 <?php
 $s = $_REQUEST["str"];
-// $s = $argv[1];
+// $s = $argv[1]; 
  
 
 //$x = $_GET("str");
