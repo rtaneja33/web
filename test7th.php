@@ -26,19 +26,19 @@ CREATE;
 
 	// $query = "CREATE "...
 	//add some data
-	$query = <<<CREATE
-		INSERT INTO Football VALUES(
-			Redskins, 4);
+// 	$query = <<<CREATE
+// 		INSERT INTO Football VALUES(
+// 			Redskins, 4);
 		
 
-CREATE;
-$ret = pg_query($query);
-	if(!$ret)
-	{
-		echo(pg_last_error($db));
-	}
-	else{
-		echo("IT WORKED!");
-	}
+// CREATE;
+// $ret = pg_query($query);
+// 	if(!$ret)
+// 	{
+// 		echo(pg_last_error($db));
+// 	}
+// 	else{
+// 		echo("IT WORKED!");
+// 	}
 	//Query our table
  ?>
