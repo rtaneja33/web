@@ -13,7 +13,7 @@ if (!$db) {
 else
 echo "SUCCESS";
 
-$sql = "INSERT INTO MyGuests ('firstname', 'lastname', 'email')
+$sql = "INSERT INTO MyGuests (`firstname` , `lastname` , `email`)
 VALUES ('John', 'Doe', 'john@example.com')";
 
 if (mysqli_query($db, $sql)) {
