@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Weather App Using AJAX</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+	</script>
+	<script type="text/javascript">
+		function sendRequest(){
+		$.ajax({
+			
+			url:"http://api.openweathermap.org/data/2.5/weather?zip=" + $("#zip").val()+",us&appid=560028eacd09f12388e01ee42af511e2",
+			success:function(response){
+				console.log(response);
+				var temp = response.main.temp;
+				temp -= 273;
+				temp*= 9/5;
+				temp+=32;
+				var d=new Date(response.sys.sunrise*1000).toString();
+				$("#output").html(d);
+			}
+		})
+	}
+	</script>
+</head>
+<body>
+<input id="zip">
+	<button id="clicker" onclick="sendRequest()">Send Request</button>
+	Current Temp: <div id="output"></div>
+	
+</body>
+</html>
+
