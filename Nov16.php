@@ -1,4 +1,5 @@
 <?php 
+	echo "HELLO";
 	$host="host=ec2-174-129-223-35.compute-1.amazonaws.com";
 	$dbname="dbname=d7b1p5egvpv1r1";
 	$user="user=ixmcxtritsaljf";
