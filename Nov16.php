@@ -6,15 +6,15 @@
 	$password="password=1_NfGYcoaASkseEh0zvQ_eOffl";
 	$db = pg_connect($host." " .$dbname." " .$user." " .$port." " .$password);
 	//create an insert query
-// 	$table = <<<CREATE TABLE FOOTBALL
-// (
-// PersonID varchar(255),
-// LastName varchar(255),
-// Address int,
-// City int,
-// SomethingElse int
-// );
-// CREATE;
+	$table = <<<CREATE TABLE FOOTBALL
+(
+PersonID varchar(255),
+LastName varchar(255),
+Address int,
+City int,
+SomethingElse int
+);
+CREATE;
 // $ret = pg_query($query);
 // 	if(!$db)
 // 	{
