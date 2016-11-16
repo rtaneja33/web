@@ -8,11 +8,11 @@
 	//create an insert query
 	$table = <<<CREATE TABLE FOOTBALL
 (
-PersonID int,
+PersonID varchar(255),
 LastName varchar(255),
-FirstName varchar(255),
-Address varchar(255),
-City varchar(255)
+Address int,
+City int,
+SomethingElse int
 );
 CREATE;
 // $ret = pg_query($query);
@@ -23,18 +23,18 @@ CREATE;
 	else{
 		echo("IT WORKED!");
 	}
-	$queryStr= <<<QUERY
-	INSERT INTO FOOTBALL VALUES("Bill Belicheck","Patriots",7,2,0)
+// 	$queryStr= <<<QUERY
+// 	INSERT INTO FOOTBALL VALUES("Bill Belicheck","Patriots",7,2,0)
 
-QUERY;
-	pg_query()($queryStr);
+// QUERY;
+// 	pg_query()($queryStr);
 
-		$queryStr= <<<QUERY
-	SELECT * FROM FOOTBALL
+// 		$queryStr= <<<QUERY
+// 	SELECT * FROM FOOTBALL
 
-QUERY;
-	$output = pg_query()($queryStr);
-	while($row=pg_fetch_assoc($output))
-		var_dump($row);
+// QUERY;
+// 	$output = pg_query()($queryStr);
+// 	while($row=pg_fetch_assoc($output))
+// 		var_dump($row);
 
  ?>
