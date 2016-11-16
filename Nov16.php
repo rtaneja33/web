@@ -6,6 +6,7 @@
 	$password="password=1_NfGYcoaASkseEh0zvQ_eOffl";
 	$db = pg_connect($host." " .$dbname." " .$user." " .$port." " .$password);
 	//create an insert query
+	echo "HELLO";
 	$table = <<<CREATE TABLE FOOTBALL
 (
 PersonID varchar(255),
