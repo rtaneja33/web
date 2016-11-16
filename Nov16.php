@@ -15,7 +15,7 @@ City int,
 SomethingElse int
 );
 CREATE;
-// $ret = pg_query($query);
+$ret = pg_query($query);
 // 	if(!$db)
 // 	{
 // 		echo(pg_last_error($db));
