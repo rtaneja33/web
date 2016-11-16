@@ -16,13 +16,13 @@ City varchar(255)
 );
 CREATE;
 // $ret = pg_query($query);
-// 	if(!$ret)
-// 	{
-// 		echo(pg_last_error($db));
-// 	}
-// 	else{
-// 		echo("IT WORKED!");
-// 	}
+	if(!$db)
+	{
+		echo(pg_last_error($db));
+	}
+	else{
+		echo("IT WORKED!");
+	}
 	$queryStr= <<<QUERY
 	INSERT INTO FOOTBALL VALUES("Bill Belicheck","Patriots",7,2,0)
 
