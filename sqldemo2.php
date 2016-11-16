@@ -10,10 +10,9 @@ table, th, td {
 <body>
 
 <?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "myDB";
+$host="host=ec2-174-129-223-35.compute-1.amazonaws.com";
+$user="user=ixmcxtritsaljf";	$password="password=1_NfGYcoaASkseEh0zvQ_eOffl";
+$dbname="dbname=d7b1p5egvpv1r1";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
