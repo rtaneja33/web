@@ -6,15 +6,15 @@
 	$password="password=1_NfGYcoaASkseEh0zvQ_eOffl";
 	$db = pg_connect($host." " .$dbname." " .$user." " .$port." " .$password);
 	//create an insert query
-	$table = <<<CREATE TABLE FOOTBALL
-(
-PersonID varchar(255),
-LastName varchar(255),
-Address int,
-City int,
-SomethingElse int
-);
-CREATE;
+// 	$table = <<<CREATE TABLE FOOTBALL
+// (
+// PersonID varchar(255),
+// LastName varchar(255),
+// Address int,
+// City int,
+// SomethingElse int
+// );
+// CREATE;
 // $ret = pg_query($query);
 	if(!$db)
 	{
@@ -23,18 +23,18 @@ CREATE;
 	else{
 		echo("IT WORKED!");
 	}
-// 	$queryStr= <<<QUERY
-// 	INSERT INTO FOOTBALL VALUES("Bill Belicheck","Patriots",7,2,0)
+	$queryStr= <<<QUERY
+	INSERT INTO FOOTBALL VALUES("Bill Belicheck","Patriots",7,2,0)
 
-// QUERY;
-// 	pg_query()($queryStr);
+QUERY;
+	pg_query()($queryStr);
 
-// 		$queryStr= <<<QUERY
-// 	SELECT * FROM FOOTBALL
+		$queryStr= <<<QUERY
+	SELECT * FROM FOOTBALL
 
-// QUERY;
-// 	$output = pg_query()($queryStr);
-// 	while($row=pg_fetch_assoc($output))
-// 		var_dump($row);
+QUERY;
+	$output = pg_query()($queryStr);
+	while($row=pg_fetch_assoc($output))
+		var_dump($row);
 
  ?>
