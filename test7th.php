@@ -15,7 +15,7 @@
 
 CREATE;
 	$ret = pg_query($query);
-	if(!$db)
+	if(!$ret)
 	{
 		echo(pg_last_error($db));
 	}
