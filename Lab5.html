@@ -164,17 +164,17 @@
 
 	
 	</style>
-	<title>Lab1Extension</title>
+	<title>Lab5</title>
 </head>
 <div style="background:url(http://mediad.publicbroadcasting.net/p/kwmu/files/201508/tacos.jpg) center center no-repeat;width:screen.width;height:750px;color:black;font-size:18px;solid #ccc;">
 <body>
 	<h1>
 		Taneja Tacos
 	</h1>
-	<form id = "bf" autocomplete="on">
-	<p style= font-weight:bold>Username <input type = "text" id="firstNum" style= margin-left:10px autofocus></p>
-	<p style= font-weight:bold>City<input type = "text" id="secondNum" style= margin-left:55px></p>
-	<p style= font-weight:bold>State<input type = "text" id="thirdNum" style = margin-left:48px></p>
+	<form id = "bf" autocomplete="on" action = "table.php" method ="post">
+	<p style= font-weight:bold>Username <input type = "text" id="firstNum" name ="USER" style= margin-left:10px autofocus></p>
+	<p style= font-weight:bold>City<input type = "text" id="secondNum" name = "CITY" style= margin-left:55px></p>
+	<p style= font-weight:bold>State<input type = "text" id="thirdNum" name = "STATE" style = margin-left:48px></p>
 	
 		<form>
   	<!-- <div><input id="radiob2" type="radio" onclick="dd()" name= "ex" checked> Dropdown<br>
@@ -184,7 +184,7 @@
 
  
  <form id="formname" name="formname" method="post" action="submitform.asp" >
- <table  border="0" cellspacing="5" cellpadding="5" style = >
+ <table  border="0" cellspacing="5" cellpadding="5" >
 
  </table>
 
